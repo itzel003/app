@@ -19,7 +19,6 @@ const routes: Routes = [
         path: 'Usuario',
         loadChildren: () => import('../tab3/tab3.module').then(m => m.Tab3PageModule)
       },
-     
       {
         path: 'home',
         loadChildren: () => import('../home/home.module').then( m => m.HomePageModule)
