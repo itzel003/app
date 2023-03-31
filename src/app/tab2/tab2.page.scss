@@ -1,0 +1,20 @@
+ion-button{
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 20vh;
+    width: 100vh;
+    box-shadow: none;
+    margin: auto;
+    margin-top: 2%;
+ 
+}
+
+@media screen and (max-width:720px){
+   ion-button{
+    width: 80%;
+    text-align: center;
+   }
+}
+ion-title{
+    text-align: center;
+}

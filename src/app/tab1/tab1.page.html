@@ -1,0 +1,87 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-segment (ionChange)="segmentChanged($event)" value="list">
+    <ion-segment-button value="list">
+      <ion-label>
+        Departamentos
+      </ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="card">
+      <ion-label>
+        Producto
+      </ion-label>
+    </ion-segment-button>
+  </ion-segment>
+  <ion-list
+    class="animate__animated animate__slideInUp animate__fast"
+    *ngIf="segment === 'list'"
+  >
+  
+    <ion-item *ngFor="let item of arr; let index = index">
+      <ion-button [routerLink]="['../home']">Departamento {{index+1}}</ion-button>
+    </ion-item>
+  </ion-list>
+
+  <div
+    class="animate__animated animate__slideInUp animate__fast"
+    *ngIf="segment === 'card'">
+    
+  
+      <ion-card-content>
+        <ion-card-title>Nuestro Producto </ion-card-title>
+        <ion-card-subtitle color="warning">Alarma de Humo</ion-card-subtitle>
+        <br />
+        <h4>4for You no se confía de su reconocimiento de marca, sino que está dispuesta a mostrar el valor de su producto de manera puntual.</h4>
+        <br />
+        <p>¿Quién te dijo que una marca enfocada en profesionales y gerentes no puede ser divertida? 4For You se dirige a su público de una manera respetuosa, sin dejar de lado la creacion de software. Es por ello que tenemos un producto de calidad.</p>
+       <br />
+      <p> Para este proyecto se decidió observar la variación en el tiempo de la concentración del humo así como la presencia de llama en el área del sensor por medio de los niveles de radiación detectados por el mismo cuando se esta en presencia de una llama, con el fin de obtener un sistema que detecte alguna fuente de incendio.</p>
+        <br />
+      El sistema construido envía la información sobre los niveles en la concentración de gases e indica si se detecta la presencia de humo “cercana”, “lejana”.
+
+      <ion-img src="https://4-for-you.vercel.app/img/producto%20.jpg" alt="Arduino"></ion-img>
+      </ion-card-content>
+      <ion-card-content>
+        <ion-card-title> Los materiales que se usaron son los siguientes:</ion-card-title>
+        <ion-card-subtitle color="warning">MATERIALES</ion-card-subtitle>
+        <br />
+        <ion-list lines="inset">
+          <ion-item>
+            <ion-label>Placa de pruebas</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label>Arduino uno</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label>Buzzer</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label>Sensor de gas MQ2</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label>Cables</ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+      <ion-card-content>
+        <ion-card-title >También compartimos el diagrama del circuito</ion-card-title>
+
+        <br />
+        <ion-img src="https://4-for-you.vercel.app/img/diagrama.jpg" alt="Arduino"></ion-img>
+      </ion-card-content>
+      
+      <ion-card-content>
+        <ion-card-title >Puedes visitar nuestra página en el siguiente link:</ion-card-title>
+
+        <br />
+        <a target="_blank"   href="https://4-for-you.vercel.app/product.html"> <ion-card-title >4For You</ion-card-title></a> 
+
+      </ion-card-content>
+
+  </div>
+</ion-content>
